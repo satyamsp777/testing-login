@@ -1,22 +1,3 @@
-// src/components/Dashboard.js
-// import React from "react";
-// import "./Dashboard.css"; // Import the CSS file for styling
-
-// function Dashboard({ onLogout }) {
-//   return (
-//     <div className="dashboard-container">
-//       <h2>Dashboard Page</h2>
-//       <button className="logout-btn" onClick={onLogout}>
-//         Logout
-//       </button>
-//     </div>
-//   );
-// }
-
-// export default Dashboard;
-
-// new
-
 import { useEffect, useState } from "react";
 import axios from "axios";
 import UserData from "./UserData.jsx";
@@ -26,7 +7,7 @@ const Dashboard = ({ onLogout }) => {
   const [users, setUsers] = useState([]);
   const [token, setToken] = useState(null);
   const [path, setPath] = useState();
-  const [loggedIn, setLoggedIn] = useState(false); // Add loggedIn state
+  // const [loggedIn, setLoggedIn] = useState(false); // Add loggedIn state
 
   const apiToken = async () => {
     try {
@@ -109,14 +90,14 @@ const Dashboard = ({ onLogout }) => {
     }
   };
 
-  const handleLogin = async () => {
-    const newToken = await apiToken();
-    if (newToken) {
-      setToken(newToken);
-      await fetchUsers(newToken);
-      setLoggedIn(true);
-    }
-  };
+  // const handleLogin = async () => {
+  //   const newToken = await apiToken();
+  //   if (newToken) {
+  //     setToken(newToken);
+  //     await fetchUsers(newToken);
+  //     setLoggedIn(true);
+  //   }
+  // };
 
   // const fetchData = async () => {
   //   let tokenFromStorage = sessionStorage.getItem("token");

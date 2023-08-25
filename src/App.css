@@ -40,6 +40,7 @@
 .read-the-docs {
   color: #888;
 }
+
 .table-container {
   /* overflow-x: 800px; */
   overflow-x: auto;
@@ -200,4 +201,8 @@ button {
   background-color: #f44336; /* Red */
   color: white;
   border: none;
+}
+.td-button {
+  min-width: 20rem;
+  background-color: white;
 }
